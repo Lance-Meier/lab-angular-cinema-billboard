@@ -1,0 +1,38 @@
+
+<div>
+  <div ><span >Room: {{theMovie.room}} </span><span class="title">{{theMovie.title}}</span>
+  </div>
+  <img [src]="theMovie.poster" width="25%">
+  <div class="info">
+      <div >
+    <b>Genres</b>
+    <ul>
+      <li *ngFor="let genre of theMovie.genres">
+        {{genre}}
+      </li>
+    </ul></div>
+    <div >
+    <b>Year </b>
+    <span>{{theMovie.year}}</span>
+  </div>
+    <div >
+    <b>Director </b>
+    <span>{{theMovie.director}}</span>
+  </div>
+    <div >
+    <b>Actors</b>
+      <ul>
+        <li *ngFor="let actor of theMovie.actors">
+          {{actor}}
+        </li>
+      </ul>
+    </div>
+      <div >
+      <b>Time</b>
+      <span>{{theMovie.hours}} hours</span>
+      </div>
+      <b>Synopsis</b>
+      <p>{{theMovie.synopsis}}</p>
+  </div>
+</div>
+<button [routerLink] = "['/home']" >Home</button> 
